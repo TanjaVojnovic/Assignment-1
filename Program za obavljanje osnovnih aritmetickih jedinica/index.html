@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>JavaScript - Program za racunanje</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Fundamentals Assignment-7">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Tanja Vojnovic">
+</head>
+<body>
+    
+    <script>
+        var firstNumber = prompt("Enter number A:"); 
+        var operationSign = prompt("Enter operation sign:"); 
+        var secondNumber = prompt("Enter number B:");
+
+
+        var result_1 = parseInt(firstNumber) + parseInt(secondNumber);
+        var result_2 = parseInt(firstNumber) - parseInt(secondNumber);
+        var result_3 = parseInt(firstNumber) * parseInt(secondNumber);
+        var result_4 = parseInt(firstNumber) / parseInt(secondNumber);
+
+        if (operationSign == "+") {
+            alert("result is:" + result_1);
+        } else if (operationSign == "-") {
+            alert("result is:" + result_2);
+        } else if (operationSign == "*") {
+            alert("result is:" + result_3);
+        } else if (operationSign == "/") {
+            alert("result is:" + result_4);
+        }
+
+
+    </script>
+</body>
+</html>
