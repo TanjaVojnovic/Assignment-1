@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced CSS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Fundamentals Assignment-8">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Tanja Vojnovic">
+    <style>
+
+    [href^="https://www.google.com"] {
+
+        color: rgb(2, 122, 2);
+    }    
+
+    [href*="link-group"] {
+
+        color: rgb(177, 54, 54);
+    }
+
+    #second-div > p:nth-child(even) {
+        color: rgb(177, 54, 54);
+    }
+
+    #second-div > p:nth-child(odd) {
+        color:rgb(6, 6, 167);
+    }
+
+    #first-div > p::after { 
+        content: "- NEW";
+        color:rgb(240, 216, 7);
+    }
+
+    body > p:last-of-type:hover {
+        font-style: italic;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
+        </div>
+    </div>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
+</body>
+
+</html>
