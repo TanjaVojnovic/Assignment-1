@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Mihajlo Pupin</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="HTML and CSS Fundamentals Assignment-5">
+        <meta name="keywords" content="HTML,CSS,JavaScript">
+        <meta name="author" content="Tanja Vojnovic">
+    </head>
+    <style>
+        body {
+            width: 1500px;
+            margin: 20px auto;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        header {
+            border-bottom: 2px solid gray;
+            background-color: rgb(177, 54, 54);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+        }
+        nav {
+            padding: 16px 0 16px 0;
+            font-size: large;
+            font-weight: bold;
+        }
+        footer {
+            padding: 16px 0 16px 0;
+            border-top:2px solid gray; 
+        }
+        a {
+            margin-right: 6px;
+        }
+        section {
+            display: inline-block;
+            width: 350px;
+            padding: 0 9 0 0;
+            margin-bottom: 8px;
+            vertical-align: top;
+            margin-left : 8px;
+        }
+        aside {
+            display: inline-block;
+            width: 700px;
+            vertical-align: top;
+            padding: 0 0 0 8px;
+            border-left: 2px solid grey; 
+        }
+        div {
+            width: 200px;
+            height: 50px;
+            margin-bottom: 20px;
+            background-color: rgb(177, 54, 54);
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        } 
+        .white {
+            color: white;
+        }
+        #publishing {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #publishing td, #publishing th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #publishing tr:nth-child(even){background-color: #f2f2f2;}
+
+        #publishing tr:hover {background-color: #ddd;}
+
+        #publishing th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgb(177, 54, 54);
+            color: white;
+        }
+    </style>
+<body>
+    <header>
+        <h1>Mihajlo Pupin</h1>
+        <p>(9 October 1858 – 12 March 1935)</p>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <div id="box1">
+                    <li> 
+                        <a href="../index.html"><span class="white"> Main page </span></a> 
+                    </li>
+                </div>
+                <!--We have to move back one folder to access index.html this is the reason why we use ../-->
+                <div id="box2">
+                    <li> 
+                        <a href="Early-life-and-education.html"><span class="white"> Early life and education </span></a>
+                    </li>
+                </div>
+                <!--Since the page early_life.html is in the same folder we use regular link path-->
+                <div id="box3">
+                    <li> 
+                        <a href="Literary-work.html"><span class="white"> Literary work </span></a> 
+                    </li>
+                </div>
+                <div id="box4">
+                    <li> 
+                        <a href="Pupin-coils.html"><span class="white"> Pupin coils </span></a> 
+                    </li>
+                </div>
+                <!--Since the page Pupin coils.html is in the same folder we use regular link path--> 
+            </ul>
+        </nav>
+    </section>
+    <section><aside>
+        <h1>Literary work</h1>
+        <p> Besides his patents he published several dozen scientific disputes, articles, reviews and a 396-page autobiography under the name Michael Pupin, <em>From Immigrant to Inventor</em> (Scribner's, 1923). He won the annual Pulitzer Prize for Biography or Autobiography. It was published in Serbian in 1929 under the title <em><b>From pastures to scientist</b></em> (Od pašnjaka do naučenjaka).</p> 
+        <p><strong>Beside this he also published:</strong></p>
+        <ul>
+            <table id="publishing">
+                <tr>
+                    <th>Book title</th>
+                    <th>Publisher</th>
+                    <th>Place of publish</th>
+                    <th>Year of publish</th>
+                </tr>
+                <tr>
+                    <td>Der Osmotische Druch und seine Beziehung zur Freien Energie</td>
+                    <td>Buchdruckerei von Gustav Shade</td>
+                    <td>Berlin</td>
+                    <td>1889.</td>
+                </tr>
+                <tr>
+                    <td>Thermodynamics of Reversible Cycles in Gases and Saturated Vapors</td>
+                    <td>John Wiley & Sons</td>
+                    <td>London</td>
+                    <td>1894.</td>
+                </tr>
+                <tr>
+                    <td>Serbian Orthodox Church</td>
+                    <td>J. Murray</td>
+                    <td>London</td>
+                    <td>1918.</td>
+                </tr>
+                <tr>
+                    <td>Yugoslavia. (In Association for International Conciliation Amer. Branch —Yugoslavia)</td>
+                    <td>American Association for International Conciliation</td>
+                    <td>New York</td>
+                    <td>1919.</td>
+                </tr>
+                <tr>
+                    <td>The New Reformation; from Physical to Spiritual Realities</td>
+                    <td>Scribner</td>
+                    <td>New York</td>
+                    <td>1927.</td>
+                </tr>
+                <tr>
+                    <td>Romance of the Machine</td>
+                    <td>Scribner</td>
+                    <td>New York</td>
+                    <td>1930.</td>
+                </tr>
+                <tr>
+                    <td>Discussion by M. Pupin and other prominent engineers in “Toward Civilization</td>
+                    <td>C. A. Beard. Longmans, Green& Co.</td>
+                    <td>New York</td>
+                    <td>1930.</td>
+                </tr>
+            </table>
+        </ul>
+    </section></aside>   
+    <footer>
+        Copyright © Link Group
+    </footer>
+</body>
+</html>
