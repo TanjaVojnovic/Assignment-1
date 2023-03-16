@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manipulacija DOM elementima</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Building Assignment-12">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Tanja Vojnovic">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+</head>
+<body>
+    <div id="login-container">
+
+        <form>
+            <div>
+                <label for="username">Username:</label>
+                <input id="username" type="text">
+            </div>
+
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password">
+            </div>
+
+            <input type="submit" value="Login">
+        </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    
+    <script>
+
+        const user_data = {
+            username: 'new_user',
+            password: '123456789'
+            }
+                    
+        
+            $('#login-container').submit((e)=>{
+            e.preventDefault()
+            const username_value = $('#username').val();
+            const password_value = $('#password').val();
+            const username = $('#username');
+            const password = $('#password');
+
+             //ERROR MESSAGES
+            const invalid_username = $('<p class="error invalid_username"></p>').text('* Please, enter valid username...')
+            const invalid_password = $('<p class="error invalid_password"></p>').text('* Please, enter valid password...')
+            const empty_username = $('<p class="error empty_username"></p>').text('* Please, enter  username...')
+            const empty_password = $('<p class="error empty_password"></p>').text('* Please, enter  password...')
+
+             //ICONS
+            const valid_icon_username = $('<i class="fas fa-check"></i>').css({'position':'absolute','transform':'translate(-150%,60%)','color':'green'});
+            const invalid_icon_username = $('<i class="fas fa-times"></i>').css({'position':'absolute','transform':'translate(-150%,60%)','color':'red'});
+            const valid_icon_password = $('<i class="fas fa-check"></i>').css({'position':'absolute','transform':'translate(-150%,60%)','color':'green'});  
+            const invalid_icon_password = $('<i class="fas fa-times"></i>').css({'position':'absolute','transform':'translate(-150%,60%)','color':'red'});
+
+             //REMOVING ALL MESSAGE ERRORS BEOFRE ADDING NEW ONES       
+            let errors = $('.error');
+            for(let i of errors){
+                i.remove()
+            }    
+              
+             //REMOVING ALL ICONS BEFORE ADDING NEW ONES 
+            let icons = $('.fas');
+            for(let icon of icons){
+                icon.remove()
+            }
+
+             //CHECK USERNAME VALIDATION  
+            if(username_value == user_data.username){
+                username.css('border-color','green').after(valid_icon_username);
+            } else if(username_value.length == 0){
+                username.css('border-color','red').after(invalid_icon_username);
+                 $('form').append(empty_username);
+            } else{
+                username.css('border-color','red').after(invalid_icon_username);
+                $('form').append(invalid_username);
+            }
+
+             //CHECK PASSWORD VALIDATION
+            if(password_value == user_data.password){
+                password.css('border-color','green').after(valid_icon_password)    
+            } else if(password_value.length == 0){
+                password.css('border-color','red').after(invalid_icon_password);
+                $('form').append(empty_password);
+            } else{
+                password.css('border-color','red').after(invalid_icon_password);
+                $('form').append(invalid_password);
+            }
+        });
+
+    </script>  
+</body>
+</html>
