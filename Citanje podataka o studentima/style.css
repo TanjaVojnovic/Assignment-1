@@ -1,0 +1,18 @@
+#wrapper {
+    background-color: #bd86f0;
+    position: absolute;
+}
+
+#txt {
+    width: 250px;
+    height: 450px;
+    padding: 20px 20px;
+    margin: 50px;
+    background-color: #a0f5f1;
+}
+
+.click {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
